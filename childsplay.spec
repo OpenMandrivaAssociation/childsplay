@@ -1,8 +1,8 @@
 %define name 	childsplay
-%define version 0.83
+%define version 0.85.1
 %define release %mkrel 1
 
-%define pluginsver 0.83
+%define pluginsver 0.85.2
 # look in childsplay-plugins-0.xx/install.sh for variable $SCORE
 %define score 	Packid,Numbers
 
@@ -12,7 +12,7 @@ Version: 	%{version}
 Release: 	%{release}
 Source0: 	http://prdownloads.sourceforge.net/childsplay/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/childsplay/%{name}_plugins-%{pluginsver}.tar.bz2
-Patch0:		childsplay.INSTALL.SH.patch.bz2
+Patch0:		childsplay.INSTALL.SH.patch
 URL: 		http://childsplay.sourceforge.net/
 License: 	GPL
 Group: 		Games/Other
