@@ -1,6 +1,6 @@
 %define name 	childsplay
 %define version 0.85.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define pluginsver 0.85.2
 # look in childsplay-plugins-0.xx/install.sh for variable $SCORE
@@ -77,17 +77,11 @@ cp -rf assetml $RPM_BUILD_ROOT/usr/share
 
 #fix lang files atributes
 chmod 644 $RPM_BUILD_ROOT%_datadir/locale/fr/LC_MESSAGES/*
-#menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="amusement_section.png" needs="x11" title="Childsplay" longtitle="Games for kids" section="More Applications/Games/Other" xdg="true"
-EOF
-
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
-Comment=%{Summary}
+Comment=Games for children with plugins
 Exec=%{name}
 Icon=amusement_section.png
 Terminal=false
@@ -133,8 +127,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/*
 %_bindir/%name
 %_libdir/%name
-#%_datadir/locale/*/LC_MESSAGES/*.mo
 %_datadir/assetml/%name/
 %_mandir/man6/*
-%_menudir/%name
 %_datadir/applications/*
