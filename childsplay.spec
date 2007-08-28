@@ -1,8 +1,8 @@
 %define name 	childsplay
-%define version 0.85.1
-%define release %mkrel 2
+%define version 0.90.1
+%define release %mkrel 1
 
-%define pluginsver 0.85.2
+%define pluginsver 0.90
 # look in childsplay-plugins-0.xx/install.sh for variable $SCORE
 %define score 	Packid,Numbers
 
@@ -14,7 +14,7 @@ Source0: 	http://prdownloads.sourceforge.net/childsplay/%{name}-%{version}.tar.b
 Source1:	http://prdownloads.sourceforge.net/childsplay/%{name}_plugins-%{pluginsver}.tar.bz2
 Patch0:		childsplay.INSTALL.SH.patch
 URL: 		http://childsplay.sourceforge.net/
-License: 	GPL
+License: 	GPLv3
 Group: 		Games/Other
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires: 	python-devel 
@@ -86,7 +86,7 @@ Exec=%{name}
 Icon=amusement_section.png
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-MoreApplications-Education-Other;
+Categories=Game;KidsGame;
 EOF
 
 popd
