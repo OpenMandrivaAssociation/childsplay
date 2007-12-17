@@ -14,7 +14,6 @@ Patch1:		childsplay-0.81.8-highscore.patch
 URL: 		http://childsplay.sourceforge.net/
 License: 	GPLv3
 Group: 		Games/Other
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires: 	python-devel 
 Requires: 	pygame
 BuildArch:	noarch
