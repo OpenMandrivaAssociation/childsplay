@@ -1,6 +1,6 @@
 %define name 	childsplay
 %define version 0.90.1
-%define release %mkrel 2
+%define release %mkrel 4
 
 %define pluginsver 0.90
 
