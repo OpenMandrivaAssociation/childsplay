@@ -3,7 +3,7 @@
 Summary: 	Games for children with plugins
 Name: 		childsplay
 Version: 	1.6
-Release: 	%mkrel 1
+Release: 	2
 Source0: 	http://downloads.sourceforge.net/schoolsplay/%{name}-%{version}.tgz
 Source10:       http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_bg-%{alphabet_ver}.tgz
 Source11:       http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_ca-%{alphabet_ver}.tgz
@@ -256,7 +256,7 @@ rm -rf %{buildroot}
 %doc README* doc/*
 %{_bindir}/*
 %{_datadir}/childsplay_sp/SPData
-%{_datadir}/childsplay_sp/CPData
+# %{_datadir}/childsplay_sp/CPData
 %{_datadir}/childsplay_sp/CPData/*.*
 %{_datadir}/childsplay_sp/CPData/BilliardData
 %{_datadir}/childsplay_sp/CPData/FallinglettersData
