@@ -3,7 +3,7 @@
 Summary:	Games for children with plugins
 Name:		childsplay
 Version:	1.6
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Education
 Url:		http://childsplay.sourceforge.net/
