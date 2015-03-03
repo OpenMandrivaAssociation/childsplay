@@ -3,7 +3,7 @@
 Summary:	Games for children with plugins
 Name:		childsplay
 Version:	1.6
-Release:	3
+Release:	4
 License:	GPLv3+
 Group:		Education
 Url:		http://childsplay.sourceforge.net/
@@ -26,6 +26,8 @@ Source24:	http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_ru-%{alph
 Source25:	http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_sl-%{alphabet_ver}.tgz
 Source26:	http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_sv-0.9.2.tgz
 Patch0:		setup.py.diff
+Patch1:         childsplay-1.6-debian638747.patch
+Patch2:         childsplay-1.6-exceptions.patch
 Requires:	pygame
 Requires:	pygtk2.0
 Requires:	python-numpy
@@ -75,6 +77,7 @@ Summary:	Bulgarian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-bg
 
 %description sounds-bg
 Bulgarian alphabet sounds for Childsplay.
@@ -90,6 +93,7 @@ Summary:	Catalan alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-ca
 
 %description sounds-ca
 Catalan alphabet sounds for Childsplay.
@@ -106,6 +110,7 @@ Summary:	German alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-de
 
 %description sounds-de
 German alphabet sounds for Childsplay.
@@ -122,6 +127,7 @@ Summary:	New Greek alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-el
 
 %description sounds-el
 New Greek alphabet sounds for Childsplay.
@@ -137,6 +143,7 @@ Summary:	British English alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-en
 
 %description sounds-en_GB
 British English alphabet sounds for Childsplay.
@@ -152,6 +159,7 @@ Summary:	Spanish alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-es
 
 %description sounds-es
 Spanish alphabet sounds for Childsplay.
@@ -168,6 +176,7 @@ Summary:	French alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-fr
 
 %description sounds-fr
 French alphabet sounds for Childsplay.
@@ -184,6 +193,7 @@ Summary:	Italian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-it
 
 %description sounds-it
 Italian alphabet sounds for Childsplay.
@@ -200,6 +210,7 @@ Summary:	Lithuanian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-lt
 
 %description sounds-lt
 Lithuanian alphabet sounds for Childsplay.
@@ -215,6 +226,7 @@ Summary:	Norwegian Bokmål alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-no
 
 %description sounds-nb
 Norwegian Bokmål alphabet sounds for Childsplay.
@@ -230,6 +242,7 @@ Summary:	Dutch alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-nl
 
 %description sounds-nl
 Dutch alphabet sounds for Childsplay.
@@ -246,6 +259,7 @@ Summary:	Portuguese alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-pt
 
 %description sounds-pt
 Portuguese alphabet sounds for Childsplay.
@@ -261,6 +275,7 @@ Summary:	Brazilian portuguese alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-pt
 
 %description sounds-pt_BR
 Brazilian portuguese alphabet sounds for Childsplay.
@@ -277,6 +292,7 @@ Summary:	Romanian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-ro
 
 %description sounds-ro
 Romanian alphabet sounds for Childsplay.
@@ -292,6 +308,7 @@ Summary:	Russian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-ru
 
 %description sounds-ru
 Russian alphabet sounds for Childsplay.
@@ -308,6 +325,7 @@ Summary:	Slovenian alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-sl
 
 %description sounds-sl
 Slovenian alphabet sounds for Childsplay.
@@ -324,6 +342,7 @@ Summary:	Swedish alphabet sounds for Childsplay
 Group:		Games/Other
 Requires:	%{name} = %{EVRD}
 Provides:	%{name}-sound = %{EVRD}
+Requires:	locales-sv
 
 %description sounds-sv
 Swedish alphabet sounds for Childsplay.
@@ -336,7 +355,7 @@ Swedish alphabet sounds for Childsplay.
 
 %prep
 %setup -q -a 10 -a 11 -a 12 -a 13 -a 14 -a 15 -a 16 -a 17 -a 18 -a 19 -a 20 -a 21 -a 22 -a 23 -a 24 -a 25 -a 26
-%patch0 -p0
+%apply_patches
 
 %build
 
@@ -352,7 +371,20 @@ mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
-Comment=Games for children
+GenericName=Games for children
+GenericName[de]=Spiele für Kinder
+GenericName[it]=Giochi per bambini
+GenericName[pl]=Gry dla dzieci
+GenericName[ru]=Игры для детей
+GenericName[cy]=Gemau ar gyfer plant
+GenericName[et]=Mängud lastele
+GenericName[hu]=Gyermekjátékok
+GenericName[nl]=Spelletjes voor kinderen
+Comment=Games for children with plugins
+Comment[cy]=Gemau ar gyfer plant, gydag ategynnau
+Comment[et]=Pluginatega mängud lastele
+Comment[hu]=Gyermekjátékok bővítőmodulokkal
+Comment[ru]=Игры для детей с плагинами
 Exec=%{name}
 Icon=%{name}
 Terminal=false

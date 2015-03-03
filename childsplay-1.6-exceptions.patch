@@ -1,0 +1,20 @@
+--- childsplay-1.6/SPMainCore.py.orig	2014-06-18 22:30:58.283303183 +0200
++++ childsplay-1.6/SPMainCore.py	2014-06-18 22:31:44.429306599 +0200
+@@ -61,7 +61,7 @@
+ from SPocwWidgets import ExitDialog, InfoDialog, GraphDialog, Graph, Label, \
+     ExeCounter
+ from SPVirtualkeyboard import VirtualKeyboard
+-from sqlalchemy import exceptions as sqla_exceptions
++from sqlalchemy import exc as sqla_exceptions
+ 
+ # Used to cleanup stuff when the Python vm ends
+ def cleanup():
+@@ -197,7 +197,7 @@
+         # get a datamanager which will also handle the login screen
+         try:
+             self.dm = SPDataManager.DataManager(self.spgoodies)
+-        except sqla_exceptions.SQLError:
++        except sqla_exceptions.SQLAlchemyError:
+             self.logger.exception("Error while handeling the dbase, try removing the existing dbase")
+         # setup misc stuff
+         

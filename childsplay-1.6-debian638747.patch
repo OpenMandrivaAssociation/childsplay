@@ -1,0 +1,11 @@
+--- a/SPDataManager.py	2011-06-03 13:24:28.000000000 +0200
++++ b/SPDataManager.py	2012-09-30 10:34:46.650277329 +0200
+@@ -38,7 +38,7 @@ NOSQLA = False
+ 
+ try:
+     import sqlalchemy as sqla
+-    import sqlalchemy.exceptions as sqlae
++    from sqlalchemy import exc as sqlae
+     import SQLTables
+ except ImportError:
+     module_logger.exception("No sqlalchemy package found")
