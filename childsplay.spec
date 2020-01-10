@@ -355,7 +355,7 @@ Swedish alphabet sounds for Childsplay.
 
 %prep
 %setup -q -a 10 -a 11 -a 12 -a 13 -a 14 -a 15 -a 16 -a 17 -a 18 -a 19 -a 20 -a 21 -a 22 -a 23 -a 24 -a 25 -a 26
-%apply_patches
+%autopatch -p1
 
 %build
 
