@@ -6,7 +6,7 @@ Version:	1.6
 Release:	4
 License:	GPLv3+
 Group:		Education
-Url:		http://childsplay.sourceforge.net/
+Url:		https://childsplay.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/schoolsplay/%{name}-%{version}.tgz
 Source10:	http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_bg-%{alphabet_ver}.tgz
 Source11:	http://downloads.sourceforge.net/schoolsplay/alphabet_sounds_ca-%{alphabet_ver}.tgz
